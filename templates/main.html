@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+</head>
+<body>
+<button id="order_patch">Order update</button>
+<div id="div1"></div>
+</body>
+<script>
+$('#order_patch').click(function () {
+    $.ajax({
+    url : '/order/1',
+    data : data,
+    type : 'PATCH',
+    contentType : 'application/json',
+    success: function(result) {
+         $("#div1").html(result);
+    },
+    xhr: function() {
+        return window.XMLHttpRequest == null || new window.XMLHttpRequest().addEventListener == null
+            ? new window.ActiveXObject("Microsoft.XMLHTTP")
+            : $.ajaxSettings.xhr();
+    }
+});
+});
+
+</script>
+</html>
