@@ -1,13 +1,12 @@
 Small demo of Oauth2 and microservices.
 # Resource API (microservices)
-  - Authorization API service - (AuthService.py)</br>
-  - GoodService
-  - OrderService
+  - Authorization API service: **services/AuthService.py**</br>
+  - GoodService: **services/GoodService.py**
+  - OrderService: **services/OrderService.py**
 
 # Frontend 
-  - Authorization frontend service - (authorization_fe.py)</br>
-    Third party web service for granting user
-  - Frontend service - (frontend.py) </br>
+  - Authorization frontend service: **authorization_fe.py**</br>
+  - Frontend service: **frontend.py** </br>
     It's our core application
  
  Exchanging token is between Authorization front-end and API service, like following:
